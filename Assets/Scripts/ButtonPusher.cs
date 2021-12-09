@@ -25,7 +25,7 @@ public class ButtonPusher : MonoBehaviour
 
     public void PushButtonAnimation()
     {
-        if(!pauseInteraction)
+        if(!pauseInteraction || !elevetorController.isMoving)
         {
             buttonAnim.Play(pushingButtonAnim, 0, 0.0f);
             
