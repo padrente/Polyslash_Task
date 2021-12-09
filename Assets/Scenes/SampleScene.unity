@@ -332,6 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 99700526}
+  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButton
   waitTimer: 1
   pauseInteraction: 0
@@ -467,6 +468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 280267066}
+  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButton
   waitTimer: 1
   pauseInteraction: 0
@@ -610,6 +612,8 @@ MonoBehaviour:
   doorAnim: {fileID: 388626495}
   doorOpenAnim: ElevatorOpen
   doorCloseAnim: ElevatorClose
+  doorOpen: 0
+  buttonPushed: 0
 --- !u!65 &388626497
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -877,6 +881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 728839948}
+  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButton
   waitTimer: 1
   pauseInteraction: 0
@@ -1251,6 +1256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 1133275744}
+  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButton
   waitTimer: 1
   pauseInteraction: 0
@@ -1668,6 +1674,133 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709477141}
   m_Mesh: {fileID: 6464809856111060268, guid: 30cdeb7622fe9c64eaa32929cf6ba8ba, type: 3}
+--- !u!1 &1710938438
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1710938439}
+  - component: {fileID: 1710938440}
+  m_Layer: 0
+  m_Name: Elevator Sounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1710938439
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710938438}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.0025, y: 0.0018, z: 0.01352}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1594600795769816686}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1710938440
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710938438}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1795463502
 GameObject:
   m_ObjectHideFlags: 0
@@ -1729,6 +1862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 1795463506}
+  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButton
   waitTimer: 1
   pauseInteraction: 0
@@ -2013,14 +2147,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1893860589}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.42, y: 0.71, z: -0.4701107}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 4.5, y: 27.839, z: -0.4701107}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1692301797}
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &1893860591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2239,6 +2373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 1951147314}
+  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButton
   waitTimer: 1
   pauseInteraction: 0
@@ -2374,6 +2509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 2069079344}
+  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButton
   waitTimer: 1
   pauseInteraction: 0
@@ -2509,6 +2645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 2141784637}
+  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButton
   waitTimer: 1
   pauseInteraction: 0
@@ -2650,7 +2787,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152611092568477617}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 3fee11e9b0624e042988c83c5e8f437b, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2822,7 +2959,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132147538320058}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 3fee11e9b0624e042988c83c5e8f437b, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
@@ -2866,13 +3003,48 @@ GameObject:
   - component: {fileID: 2222041827590262773}
   - component: {fileID: 8906401100216528651}
   - component: {fileID: 6998695885729700087}
-  m_Layer: 0
+  - component: {fileID: 1297151057015516899}
+  - component: {fileID: 1297151057015516900}
+  m_Layer: 6
   m_Name: B7
-  m_TagString: Untagged
+  m_TagString: Buttons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1297151057015516899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297151057015516898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74c0f766767180047ab5c4d2812d1616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonAnim: {fileID: 3801106060262007519}
+  buttonClicking: {fileID: 0}
+  pushingButtonAnim: PressingButtonInElevator
+  waitTimer: 1
+  pauseInteraction: 0
+  floorInfo: 7
+  elevatorDoorObj: {fileID: 388626496}
+  elevetorController: {fileID: 2119779619608075478}
+--- !u!65 &1297151057015516900
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297151057015516898}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00021602586, y: 0.00065058924, z: 0.00065058924}
+  m_Center: {x: -0.013642244, y: -0.011092447, z: 0.0121524185}
 --- !u!4 &1438314805041415886
 Transform:
   m_ObjectHideFlags: 0
@@ -2923,6 +3095,7 @@ Transform:
   m_Children:
   - {fileID: 7689565548716664141}
   - {fileID: 388626494}
+  - {fileID: 1710938439}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3021,13 +3194,48 @@ GameObject:
   - component: {fileID: 3773356715315259330}
   - component: {fileID: 6199811292483210630}
   - component: {fileID: 3794807967103125954}
-  m_Layer: 0
+  - component: {fileID: 1772283857407522685}
+  - component: {fileID: 1772283857407522686}
+  m_Layer: 6
   m_Name: B9
-  m_TagString: Untagged
+  m_TagString: Buttons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1772283857407522685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772283857407522684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74c0f766767180047ab5c4d2812d1616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonAnim: {fileID: 3801106060262007519}
+  buttonClicking: {fileID: 0}
+  pushingButtonAnim: PressingButtonInElevator
+  waitTimer: 1
+  pauseInteraction: 0
+  floorInfo: 9
+  elevatorDoorObj: {fileID: 388626496}
+  elevetorController: {fileID: 2119779619608075478}
+--- !u!65 &1772283857407522686
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772283857407522684}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00021602586, y: 0.00065058924, z: 0.00065058924}
+  m_Center: {x: -0.013642244, y: -0.013694801, z: 0.0121524185}
 --- !u!1 &1922814750084889351
 GameObject:
   m_ObjectHideFlags: 0
@@ -3039,13 +3247,48 @@ GameObject:
   - component: {fileID: 1581340586127334130}
   - component: {fileID: 6782822585404326873}
   - component: {fileID: 4166407120378567898}
-  m_Layer: 0
+  - component: {fileID: 1922814750084889352}
+  - component: {fileID: 1922814750084889353}
+  m_Layer: 6
   m_Name: B2
-  m_TagString: Untagged
+  m_TagString: Buttons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1922814750084889352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922814750084889351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74c0f766767180047ab5c4d2812d1616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonAnim: {fileID: 3801106060262007519}
+  buttonClicking: {fileID: 0}
+  pushingButtonAnim: PressingButtonInElevator
+  waitTimer: 1
+  pauseInteraction: 0
+  floorInfo: 2
+  elevatorDoorObj: {fileID: 388626496}
+  elevetorController: {fileID: 2119779619608075478}
+--- !u!65 &1922814750084889353
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922814750084889351}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00021602586, y: 0.00065058924, z: 0.00065058924}
+  m_Center: {x: -0.013642244, y: -0.012393625, z: 0.0151451295}
 --- !u!1 &2119779619608075476
 GameObject:
   m_ObjectHideFlags: 0
@@ -3074,7 +3317,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119779619608075476}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 3fee11e9b0624e042988c83c5e8f437b, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
@@ -3094,6 +3337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actualFloor: 9
+  isMoving: 0
   elevetorObj: {fileID: 2119779619608075479}
   doorControll: {fileID: 388626496}
 --- !u!95 &2119779619608075479
@@ -3148,13 +3392,48 @@ GameObject:
   - component: {fileID: 8701521440478351876}
   - component: {fileID: 1068279774276087420}
   - component: {fileID: 9189238056220032292}
-  m_Layer: 0
+  - component: {fileID: 2469766990569968836}
+  - component: {fileID: 2469766990569968837}
+  m_Layer: 6
   m_Name: B4
-  m_TagString: Untagged
+  m_TagString: Buttons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2469766990569968836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2469766990569968835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74c0f766767180047ab5c4d2812d1616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonAnim: {fileID: 3801106060262007519}
+  buttonClicking: {fileID: 0}
+  pushingButtonAnim: PressingButtonInElevator
+  waitTimer: 1
+  pauseInteraction: 0
+  floorInfo: 4
+  elevatorDoorObj: {fileID: 388626496}
+  elevetorController: {fileID: 2119779619608075478}
+--- !u!65 &2469766990569968837
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2469766990569968835}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00021602586, y: 0.00065058924, z: 0.00065058924}
+  m_Center: {x: -0.013642244, y: -0.011092447, z: 0.013648774}
 --- !u!23 &2623630601323742658
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3207,35 +3486,16 @@ GameObject:
   - component: {fileID: 741828405742788720}
   - component: {fileID: 5645339308534397384}
   - component: {fileID: 5423773020209073760}
-  - component: {fileID: 2910918981177884817}
-  - component: {fileID: 2910918981177884816}
-  m_Layer: 0
+  - component: {fileID: 2910918981177884818}
+  - component: {fileID: 2910918981177884819}
+  m_Layer: 6
   m_Name: B1
-  m_TagString: Untagged
+  m_TagString: Buttons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &2910918981177884816
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2910918981177884815}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5262d2fb8bce82d46be1892c9d3cfe51, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2910918981177884817
+--- !u!114 &2910918981177884818
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3244,9 +3504,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 2910918981177884815}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd41d116b10074f42b2e61b1ec94397a, type: 3}
+  m_Script: {fileID: 11500000, guid: 74c0f766767180047ab5c4d2812d1616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonAnim: {fileID: 3801106060262007519}
+  buttonClicking: {fileID: 0}
+  pushingButtonAnim: PressingButtonInElevator
+  waitTimer: 1
+  pauseInteraction: 0
+  floorInfo: 1
+  elevatorDoorObj: {fileID: 388626496}
+  elevetorController: {fileID: 2119779619608075478}
+--- !u!65 &2910918981177884819
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2910918981177884815}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00021602586, y: 0.00065058924, z: 0.00065058924}
+  m_Center: {x: -0.013642244, y: -0.011092447, z: 0.0151451295}
 --- !u!33 &2985079584299943792
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3307,13 +3588,48 @@ GameObject:
   - component: {fileID: 3505134465423819761}
   - component: {fileID: 5388649885939140366}
   - component: {fileID: 2623630601323742658}
-  m_Layer: 0
+  - component: {fileID: 3322096337208120547}
+  - component: {fileID: 3322096337208120548}
+  m_Layer: 6
   m_Name: B3
-  m_TagString: Untagged
+  m_TagString: Buttons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3322096337208120547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3322096337208120546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74c0f766767180047ab5c4d2812d1616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonAnim: {fileID: 3801106060262007519}
+  buttonClicking: {fileID: 0}
+  pushingButtonAnim: PressingButtonInElevator
+  waitTimer: 1
+  pauseInteraction: 0
+  floorInfo: 3
+  elevatorDoorObj: {fileID: 388626496}
+  elevetorController: {fileID: 2119779619608075478}
+--- !u!65 &3322096337208120548
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3322096337208120546}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00021602586, y: 0.00065058924, z: 0.00065058924}
+  m_Center: {x: -0.013642244, y: -0.013694801, z: 0.0151451295}
 --- !u!23 &3408899262589370619
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3508,6 +3824,7 @@ GameObject:
   - component: {fileID: 7689565548716664141}
   - component: {fileID: 6018289411609612641}
   - component: {fileID: 341535853107848771}
+  - component: {fileID: 3801106060262007519}
   m_Layer: 0
   m_Name: Elevetor_Panel
   m_TagString: Untagged
@@ -3515,6 +3832,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &3801106060262007519
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3801106060262007518}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 216f3d365e6992a418d360e5b4b03e25, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &3948428287009881671
 Transform:
   m_ObjectHideFlags: 0
@@ -3575,7 +3911,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4124579334137877416}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 3fee11e9b0624e042988c83c5e8f437b, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -3820,7 +4156,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6433818404797746993}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 3fee11e9b0624e042988c83c5e8f437b, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -3878,13 +4214,48 @@ GameObject:
   - component: {fileID: 6740039213990502652}
   - component: {fileID: 3574143827948118604}
   - component: {fileID: 3408899262589370619}
-  m_Layer: 0
+  - component: {fileID: 6658387937976440557}
+  - component: {fileID: 6658387937976440558}
+  m_Layer: 6
   m_Name: B8
-  m_TagString: Untagged
+  m_TagString: Buttons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6658387937976440557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6658387937976440556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74c0f766767180047ab5c4d2812d1616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonAnim: {fileID: 3801106060262007519}
+  buttonClicking: {fileID: 0}
+  pushingButtonAnim: PressingButtonInElevator
+  waitTimer: 1
+  pauseInteraction: 0
+  floorInfo: 8
+  elevatorDoorObj: {fileID: 388626496}
+  elevetorController: {fileID: 2119779619608075478}
+--- !u!65 &6658387937976440558
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6658387937976440556}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00021602586, y: 0.00065058924, z: 0.00065058924}
+  m_Center: {x: -0.013642244, y: -0.012393625, z: 0.0121524185}
 --- !u!4 &6740039213990502652
 Transform:
   m_ObjectHideFlags: 0
@@ -3910,13 +4281,48 @@ GameObject:
   - component: {fileID: 5528614040229228694}
   - component: {fileID: 4550503403504316169}
   - component: {fileID: 33949562890863769}
-  m_Layer: 0
+  - component: {fileID: 6767426500255319497}
+  - component: {fileID: 6767426500255319498}
+  m_Layer: 6
   m_Name: B6
-  m_TagString: Untagged
+  m_TagString: Buttons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6767426500255319497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6767426500255319496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74c0f766767180047ab5c4d2812d1616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonAnim: {fileID: 3801106060262007519}
+  buttonClicking: {fileID: 0}
+  pushingButtonAnim: PressingButtonInElevator
+  waitTimer: 1
+  pauseInteraction: 0
+  floorInfo: 6
+  elevatorDoorObj: {fileID: 388626496}
+  elevetorController: {fileID: 2119779619608075478}
+--- !u!65 &6767426500255319498
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6767426500255319496}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00021602586, y: 0.00065058924, z: 0.00065058924}
+  m_Center: {x: -0.013642244, y: -0.013694801, z: 0.013648774}
 --- !u!33 &6782822585404326873
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3991,6 +4397,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 6821887585992187857}
+  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButton
   waitTimer: 1
   pauseInteraction: 0
@@ -4071,13 +4478,48 @@ GameObject:
   - component: {fileID: 622064826154873794}
   - component: {fileID: 3667784556865158376}
   - component: {fileID: 8553865131744473388}
-  m_Layer: 0
+  - component: {fileID: 7283775492214713896}
+  - component: {fileID: 7283775492214713897}
+  m_Layer: 6
   m_Name: B5
-  m_TagString: Untagged
+  m_TagString: Buttons
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7283775492214713896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7283775492214713895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74c0f766767180047ab5c4d2812d1616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonAnim: {fileID: 3801106060262007519}
+  buttonClicking: {fileID: 0}
+  pushingButtonAnim: PressingButtonInElevator
+  waitTimer: 1
+  pauseInteraction: 0
+  floorInfo: 5
+  elevatorDoorObj: {fileID: 388626496}
+  elevetorController: {fileID: 2119779619608075478}
+--- !u!65 &7283775492214713897
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7283775492214713895}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00021602586, y: 0.00065058924, z: 0.00065058924}
+  m_Center: {x: -0.013642244, y: -0.012393625, z: 0.013648774}
 --- !u!4 &7689565548716664141
 Transform:
   m_ObjectHideFlags: 0
@@ -4168,7 +4610,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7875653276647364323}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 3fee11e9b0624e042988c83c5e8f437b, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2

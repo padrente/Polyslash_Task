@@ -7,13 +7,15 @@ public class ElevatorDoorController : MonoBehaviour
     [SerializeField] Animator doorAnim;
     [SerializeField] string doorOpenAnim = "ElevatorOpen";
     [SerializeField] string doorCloseAnim = "ElevatorClose";
-    bool doorOpen = false;
+    public bool doorOpen = false;
+    public bool buttonPushed = false;
     bool isDoorBlock = false;
     public IEnumerator AutomaticDoorclosing()
     {
         doorOpen = true;
-        yield return new WaitForSeconds(8);
-        CheckDoorStatus();
+        yield return new WaitForSeconds(4);
+        if(!buttonPushed)
+            CheckDoorStatus();
     }
     IEnumerator DoorStuck()
     {
@@ -29,12 +31,13 @@ public class ElevatorDoorController : MonoBehaviour
         }
     }
 
-    void CheckDoorStatus()
+    public void CheckDoorStatus()
     {
         if(!isDoorBlock)
         {
             doorAnim.Play(doorCloseAnim, 0, 0.0f);
             doorOpen = false;
+            buttonPushed = false;
         }
         else
             StartCoroutine(DoorStuck());

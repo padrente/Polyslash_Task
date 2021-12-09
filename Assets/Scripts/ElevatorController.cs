@@ -14,7 +14,7 @@ public class ElevatorController : MonoBehaviour
     IEnumerator MovingBlock()
     {
         isMoving = true;
-        yield return new WaitForSeconds(3.2f);    
+        yield return new WaitForSeconds(2.9f);    
         doorControll.PlayDoorAnimate();
         isMoving = false;
     } 
@@ -49,7 +49,7 @@ public class ElevatorController : MonoBehaviour
             animToPlay = actualFloor+"to"+nextFloor;
             elevetorObj.Play(animToPlay, 0, 0.0f);
             actualFloor = nextFloor;
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(2.9f);
         }
         doorControll.PlayDoorAnimate();
         isMoving = false;
@@ -64,7 +64,7 @@ public class ElevatorController : MonoBehaviour
             animToPlay = actualFloor+"to"+nextFloor;
             elevetorObj.Play(animToPlay, 0, 0.0f);
             actualFloor = nextFloor;
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(2.9f);
         }
         doorControll.PlayDoorAnimate();
         isMoving = false;

@@ -40,7 +40,7 @@ public class PlayerCasting : MonoBehaviour
                 doOnce = true;
 
                 if(Input.GetKeyDown(interactKey))
-                    raycastedObj.PushButtonAnimation();
+                    StartCoroutine(raycastedObj.PushButtonAnimation());
             }
         }
         else
