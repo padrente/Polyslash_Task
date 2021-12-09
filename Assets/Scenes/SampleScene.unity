@@ -810,7 +810,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 41.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2014,7 +2014,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1893860589}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.42, y: 25.31, z: -0.4701107}
+  m_LocalPosition: {x: -2.42, y: 0.71, z: -0.4701107}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1692301797}
@@ -3094,25 +3094,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actualFloor: 9
-  floors: 010000000200000003000000040000000500000006000000070000000800000009000000
-  floorsAnimDown:
-  - 9to8
-  - 8to7
-  - 7to6
-  - 6to5
-  - 5to4
-  - 4to3
-  - 3to2
-  - 2to1
-  floorsAnimUp:
-  - 1to2
-  - 2to3
-  - 3to4
-  - 4to5
-  - 5to6
-  - 6to7
-  - 7to8
-  - 8to9
   elevetorObj: {fileID: 2119779619608075479}
   doorControll: {fileID: 388626496}
 --- !u!95 &2119779619608075479
@@ -3226,6 +3207,8 @@ GameObject:
   - component: {fileID: 741828405742788720}
   - component: {fileID: 5645339308534397384}
   - component: {fileID: 5423773020209073760}
+  - component: {fileID: 2910918981177884817}
+  - component: {fileID: 2910918981177884816}
   m_Layer: 0
   m_Name: B1
   m_TagString: Untagged
@@ -3233,6 +3216,37 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &2910918981177884816
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2910918981177884815}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5262d2fb8bce82d46be1892c9d3cfe51, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2910918981177884817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2910918981177884815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd41d116b10074f42b2e61b1ec94397a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &2985079584299943792
 MeshFilter:
   m_ObjectHideFlags: 0

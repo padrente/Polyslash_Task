@@ -44,11 +44,11 @@ public class ButtonPusher : MonoBehaviour
             }
             else if(elevetorController.actualFloor + 1 < this.floorInfo)
             {
-                elevetorController.ElevetorGoesUp();
+                StartCoroutine(elevetorController.ElevetorGoesUp(floorInfo));
             }
             else if(elevetorController.actualFloor - 1 > this.floorInfo)
             {
-                elevetorController.ElevetorGoesDown();
+                StartCoroutine(elevetorController.ElevetorGoesDown(floorInfo));
             }
             else
                 Debug.Log("Coś poszło nie tak "+elevetorController.actualFloor+" "+floorInfo);
