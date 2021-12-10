@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class ElevatorDoorController : MonoBehaviour
 {
+    public AudioSource elevatorAudio;
+    [SerializeField] AudioClip asOpen;
+    [SerializeField] AudioClip asClose;
+    [SerializeField] AudioClip asBell;
     [SerializeField] Animator doorAnim;
     [SerializeField] string doorOpenAnim = "ElevatorOpen";
     [SerializeField] string doorCloseAnim = "ElevatorClose";
@@ -26,7 +30,9 @@ public class ElevatorDoorController : MonoBehaviour
     {
         if(!doorOpen)
         {
+            elevatorAudio.PlayOneShot(asBell);
             doorAnim.Play(doorOpenAnim, 0, 0.0f);
+            elevatorAudio.PlayOneShot(asOpen);
             StartCoroutine(AutomaticDoorclosing());
         }
     }
@@ -36,6 +42,7 @@ public class ElevatorDoorController : MonoBehaviour
         if(!isDoorBlock)
         {
             doorAnim.Play(doorCloseAnim, 0, 0.0f);
+            elevatorAudio.PlayOneShot(asClose);
             doorOpen = false;
             buttonPushed = false;
         }

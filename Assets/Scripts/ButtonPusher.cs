@@ -7,8 +7,6 @@ public class ButtonPusher : MonoBehaviour
 {
     [SerializeField] Animator buttonAnim = null;
 
-    [SerializeField] AudioSource buttonClicking = null;
-
     [SerializeField] string pushingButtonAnim = "PresingButton";
 
     [SerializeField] float waitTimer = 1f;
@@ -16,6 +14,10 @@ public class ButtonPusher : MonoBehaviour
     public int floorInfo;
     [SerializeField] ElevatorDoorController elevatorDoorObj = null;
     [SerializeField] ElevatorController elevetorController =null;
+
+    [SerializeField] AudioSource asPushingButton;
+    [SerializeField] AudioClip asClick;
+    
     
 
     IEnumerator PauseWhileAnimetePlay()
@@ -30,7 +32,7 @@ public class ButtonPusher : MonoBehaviour
         if(!pauseInteraction || !elevetorController.isMoving || !elevatorDoorObj.buttonPushed)
         {
             buttonAnim.Play(pushingButtonAnim, 0, 0.0f);
-            buttonClicking.Play();
+            asPushingButton.PlayOneShot(asClick);
             elevatorDoorObj.buttonPushed = true;
             if(this.gameObject.CompareTag("Buttons"))
             {

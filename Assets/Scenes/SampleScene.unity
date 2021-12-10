@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 18868765}
   - component: {fileID: 18868767}
   - component: {fileID: 18868766}
+  - component: {fileID: 18868768}
   m_Layer: 0
   m_Name: PantelFloor6
   m_TagString: Untagged
@@ -205,6 +206,102 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18868764}
   m_Mesh: {fileID: 6464809856111060268, guid: 30cdeb7622fe9c64eaa32929cf6ba8ba, type: 3}
+--- !u!82 &18868768
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18868764}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &21198328
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,13 +429,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 99700526}
-  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButton
   waitTimer: 1
   pauseInteraction: 0
   floorInfo: 8
   elevatorDoorObj: {fileID: 388626496}
   elevetorController: {fileID: 2119779619608075478}
+  asPushingButton: {fileID: 1906382987}
+  asClick: {fileID: 8300000, guid: 6b6c876fc87720a45ae83f31e047e783, type: 3}
 --- !u!95 &99700526
 Animator:
   serializedVersion: 3
@@ -468,13 +566,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 280267066}
-  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButton
   waitTimer: 1
   pauseInteraction: 0
   floorInfo: 5
   elevatorDoorObj: {fileID: 388626496}
   elevetorController: {fileID: 2119779619608075478}
+  asPushingButton: {fileID: 968775529}
+  asClick: {fileID: 8300000, guid: 6b6c876fc87720a45ae83f31e047e783, type: 3}
 --- !u!95 &280267066
 Animator:
   serializedVersion: 3
@@ -609,6 +708,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edf172e9f93f8a04090144d23f081623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  elevatorAudio: {fileID: 1710938440}
+  asOpen: {fileID: 8300000, guid: fcde1dc3fb83e6c4ba7d438e344726d3, type: 3}
+  asClose: {fileID: 8300000, guid: 75b36e79de36a6a40892dcb09377f7e6, type: 3}
+  asBell: {fileID: 8300000, guid: 6b1c38f2f9399544bbd11aa86636cc2c, type: 3}
   doorAnim: {fileID: 388626495}
   doorOpenAnim: ElevatorOpen
   doorCloseAnim: ElevatorClose
@@ -881,13 +984,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 728839948}
-  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButton
   waitTimer: 1
   pauseInteraction: 0
   floorInfo: 3
   elevatorDoorObj: {fileID: 388626496}
   elevetorController: {fileID: 2119779619608075478}
+  asPushingButton: {fileID: 1465241314}
+  asClick: {fileID: 8300000, guid: 6b6c876fc87720a45ae83f31e047e783, type: 3}
 --- !u!95 &728839948
 Animator:
   serializedVersion: 3
@@ -967,6 +1071,7 @@ GameObject:
   - component: {fileID: 968775526}
   - component: {fileID: 968775528}
   - component: {fileID: 968775527}
+  - component: {fileID: 968775529}
   m_Layer: 0
   m_Name: PantelFloor5
   m_TagString: Untagged
@@ -1038,6 +1143,102 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 968775525}
   m_Mesh: {fileID: 6464809856111060268, guid: 30cdeb7622fe9c64eaa32929cf6ba8ba, type: 3}
+--- !u!82 &968775529
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968775525}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &974263023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,6 +1325,7 @@ GameObject:
   - component: {fileID: 1128208981}
   - component: {fileID: 1128208983}
   - component: {fileID: 1128208982}
+  - component: {fileID: 1128208984}
   m_Layer: 0
   m_Name: PantelFloor7
   m_TagString: Untagged
@@ -1195,6 +1397,102 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1128208980}
   m_Mesh: {fileID: 6464809856111060268, guid: 30cdeb7622fe9c64eaa32929cf6ba8ba, type: 3}
+--- !u!82 &1128208984
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128208980}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1133275740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1256,13 +1554,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 1133275744}
-  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButton
   waitTimer: 1
   pauseInteraction: 0
   floorInfo: 4
   elevatorDoorObj: {fileID: 388626496}
   elevetorController: {fileID: 2119779619608075478}
+  asPushingButton: {fileID: 1865568676}
+  asClick: {fileID: 8300000, guid: 6b6c876fc87720a45ae83f31e047e783, type: 3}
 --- !u!95 &1133275744
 Animator:
   serializedVersion: 3
@@ -1342,6 +1641,7 @@ GameObject:
   - component: {fileID: 1350524900}
   - component: {fileID: 1350524902}
   - component: {fileID: 1350524901}
+  - component: {fileID: 1350524903}
   m_Layer: 0
   m_Name: PantelFloor1
   m_TagString: Untagged
@@ -1413,6 +1713,102 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350524899}
   m_Mesh: {fileID: 6464809856111060268, guid: 30cdeb7622fe9c64eaa32929cf6ba8ba, type: 3}
+--- !u!82 &1350524903
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350524899}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1465241310
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,6 +1820,7 @@ GameObject:
   - component: {fileID: 1465241311}
   - component: {fileID: 1465241313}
   - component: {fileID: 1465241312}
+  - component: {fileID: 1465241314}
   m_Layer: 0
   m_Name: PantelFloor3
   m_TagString: Untagged
@@ -1495,6 +1892,102 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1465241310}
   m_Mesh: {fileID: 6464809856111060268, guid: 30cdeb7622fe9c64eaa32929cf6ba8ba, type: 3}
+--- !u!82 &1465241314
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465241310}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1692301796
 GameObject:
   m_ObjectHideFlags: 0
@@ -1603,6 +2096,7 @@ GameObject:
   - component: {fileID: 1709477142}
   - component: {fileID: 1709477144}
   - component: {fileID: 1709477143}
+  - component: {fileID: 1709477145}
   m_Layer: 0
   m_Name: PantelFloor2
   m_TagString: Untagged
@@ -1674,6 +2168,102 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709477141}
   m_Mesh: {fileID: 6464809856111060268, guid: 30cdeb7622fe9c64eaa32929cf6ba8ba, type: 3}
+--- !u!82 &1709477145
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709477141}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1710938438
 GameObject:
   m_ObjectHideFlags: 0
@@ -1716,7 +2306,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1862,13 +2452,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 1795463506}
-  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButton
   waitTimer: 1
   pauseInteraction: 0
   floorInfo: 6
   elevatorDoorObj: {fileID: 388626496}
   elevetorController: {fileID: 2119779619608075478}
+  asPushingButton: {fileID: 18868768}
+  asClick: {fileID: 8300000, guid: 6b6c876fc87720a45ae83f31e047e783, type: 3}
 --- !u!95 &1795463506
 Animator:
   serializedVersion: 3
@@ -1948,6 +2539,7 @@ GameObject:
   - component: {fileID: 1865568673}
   - component: {fileID: 1865568675}
   - component: {fileID: 1865568674}
+  - component: {fileID: 1865568676}
   m_Layer: 0
   m_Name: PantelFloor4
   m_TagString: Untagged
@@ -2019,6 +2611,102 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1865568672}
   m_Mesh: {fileID: 6464809856111060268, guid: 30cdeb7622fe9c64eaa32929cf6ba8ba, type: 3}
+--- !u!82 &1865568676
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865568672}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1870169263
 GameObject:
   m_ObjectHideFlags: 0
@@ -2202,6 +2890,7 @@ GameObject:
   - component: {fileID: 1906382984}
   - component: {fileID: 1906382986}
   - component: {fileID: 1906382985}
+  - component: {fileID: 1906382987}
   m_Layer: 0
   m_Name: PantelFloor8
   m_TagString: Untagged
@@ -2273,6 +2962,102 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1906382983}
   m_Mesh: {fileID: 6464809856111060268, guid: 30cdeb7622fe9c64eaa32929cf6ba8ba, type: 3}
+--- !u!82 &1906382987
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906382983}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1923254912
 GameObject:
   m_ObjectHideFlags: 0
@@ -2373,13 +3158,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 1951147314}
-  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButton
   waitTimer: 1
   pauseInteraction: 0
   floorInfo: 2
   elevatorDoorObj: {fileID: 388626496}
   elevetorController: {fileID: 2119779619608075478}
+  asPushingButton: {fileID: 1709477145}
+  asClick: {fileID: 8300000, guid: 6b6c876fc87720a45ae83f31e047e783, type: 3}
 --- !u!95 &1951147314
 Animator:
   serializedVersion: 3
@@ -2509,13 +3295,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 2069079344}
-  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButton
   waitTimer: 1
   pauseInteraction: 0
   floorInfo: 7
   elevatorDoorObj: {fileID: 388626496}
   elevetorController: {fileID: 2119779619608075478}
+  asPushingButton: {fileID: 1128208984}
+  asClick: {fileID: 8300000, guid: 6b6c876fc87720a45ae83f31e047e783, type: 3}
 --- !u!95 &2069079344
 Animator:
   serializedVersion: 3
@@ -2645,13 +3432,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 2141784637}
-  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButton
   waitTimer: 1
   pauseInteraction: 0
   floorInfo: 1
   elevatorDoorObj: {fileID: 388626496}
   elevetorController: {fileID: 2119779619608075478}
+  asPushingButton: {fileID: 1350524903}
+  asClick: {fileID: 8300000, guid: 6b6c876fc87720a45ae83f31e047e783, type: 3}
 --- !u!95 &2141784637
 Animator:
   serializedVersion: 3
@@ -2977,6 +3765,7 @@ GameObject:
   - component: {fileID: 543450653322370887}
   - component: {fileID: 3469287837305983202}
   - component: {fileID: 1711813855390475304}
+  - component: {fileID: 919132149398603262}
   m_Layer: 0
   m_Name: PantelFloor9
   m_TagString: Untagged
@@ -2984,6 +3773,102 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!82 &919132149398603262
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149398603261}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6b6c876fc87720a45ae83f31e047e783, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!33 &1068279774276087420
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3025,13 +3910,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 3801106060262007519}
-  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButtonInElevator
   waitTimer: 1
   pauseInteraction: 0
   floorInfo: 7
   elevatorDoorObj: {fileID: 388626496}
   elevetorController: {fileID: 2119779619608075478}
+  asPushingButton: {fileID: 1710938440}
+  asClick: {fileID: 8300000, guid: 6b6c876fc87720a45ae83f31e047e783, type: 3}
 --- !u!65 &1297151057015516900
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3216,13 +4102,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 3801106060262007519}
-  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButtonInElevator
   waitTimer: 1
   pauseInteraction: 0
   floorInfo: 9
   elevatorDoorObj: {fileID: 388626496}
   elevetorController: {fileID: 2119779619608075478}
+  asPushingButton: {fileID: 1710938440}
+  asClick: {fileID: 8300000, guid: 6b6c876fc87720a45ae83f31e047e783, type: 3}
 --- !u!65 &1772283857407522686
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3269,13 +4156,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 3801106060262007519}
-  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButtonInElevator
   waitTimer: 1
   pauseInteraction: 0
   floorInfo: 2
   elevatorDoorObj: {fileID: 388626496}
   elevetorController: {fileID: 2119779619608075478}
+  asPushingButton: {fileID: 1710938440}
+  asClick: {fileID: 8300000, guid: 6b6c876fc87720a45ae83f31e047e783, type: 3}
 --- !u!65 &1922814750084889353
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3336,6 +4224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10d5744e6f6d86841bed855f49511bb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  asMoving: {fileID: 8300000, guid: fdd061397a43edc49a06d2f5ad790497, type: 3}
   actualFloor: 9
   isMoving: 0
   elevetorObj: {fileID: 2119779619608075479}
@@ -3414,13 +4303,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 3801106060262007519}
-  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButtonInElevator
   waitTimer: 1
   pauseInteraction: 0
   floorInfo: 4
   elevatorDoorObj: {fileID: 388626496}
   elevetorController: {fileID: 2119779619608075478}
+  asPushingButton: {fileID: 1710938440}
+  asClick: {fileID: 8300000, guid: 6b6c876fc87720a45ae83f31e047e783, type: 3}
 --- !u!65 &2469766990569968837
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3508,13 +4398,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 3801106060262007519}
-  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButtonInElevator
   waitTimer: 1
   pauseInteraction: 0
   floorInfo: 1
   elevatorDoorObj: {fileID: 388626496}
   elevetorController: {fileID: 2119779619608075478}
+  asPushingButton: {fileID: 1710938440}
+  asClick: {fileID: 8300000, guid: 6b6c876fc87720a45ae83f31e047e783, type: 3}
 --- !u!65 &2910918981177884819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3610,13 +4501,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 3801106060262007519}
-  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButtonInElevator
   waitTimer: 1
   pauseInteraction: 0
   floorInfo: 3
   elevatorDoorObj: {fileID: 388626496}
   elevetorController: {fileID: 2119779619608075478}
+  asPushingButton: {fileID: 1710938440}
+  asClick: {fileID: 8300000, guid: 6b6c876fc87720a45ae83f31e047e783, type: 3}
 --- !u!65 &3322096337208120548
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4236,13 +5128,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 3801106060262007519}
-  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButtonInElevator
   waitTimer: 1
   pauseInteraction: 0
   floorInfo: 8
   elevatorDoorObj: {fileID: 388626496}
   elevetorController: {fileID: 2119779619608075478}
+  asPushingButton: {fileID: 1710938440}
+  asClick: {fileID: 8300000, guid: 6b6c876fc87720a45ae83f31e047e783, type: 3}
 --- !u!65 &6658387937976440558
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4303,13 +5196,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 3801106060262007519}
-  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButtonInElevator
   waitTimer: 1
   pauseInteraction: 0
   floorInfo: 6
   elevatorDoorObj: {fileID: 388626496}
   elevetorController: {fileID: 2119779619608075478}
+  asPushingButton: {fileID: 1710938440}
+  asClick: {fileID: 8300000, guid: 6b6c876fc87720a45ae83f31e047e783, type: 3}
 --- !u!65 &6767426500255319498
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4397,13 +5291,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 6821887585992187857}
-  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButton
   waitTimer: 1
   pauseInteraction: 0
   floorInfo: 9
   elevatorDoorObj: {fileID: 388626496}
   elevetorController: {fileID: 2119779619608075478}
+  asPushingButton: {fileID: 919132149398603262}
+  asClick: {fileID: 8300000, guid: 6b6c876fc87720a45ae83f31e047e783, type: 3}
 --- !u!4 &6974712022452066449
 Transform:
   m_ObjectHideFlags: 0
@@ -4500,13 +5395,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonAnim: {fileID: 3801106060262007519}
-  buttonClicking: {fileID: 0}
   pushingButtonAnim: PressingButtonInElevator
   waitTimer: 1
   pauseInteraction: 0
   floorInfo: 5
   elevatorDoorObj: {fileID: 388626496}
   elevetorController: {fileID: 2119779619608075478}
+  asPushingButton: {fileID: 1710938440}
+  asClick: {fileID: 8300000, guid: 6b6c876fc87720a45ae83f31e047e783, type: 3}
 --- !u!65 &7283775492214713897
 BoxCollider:
   m_ObjectHideFlags: 0

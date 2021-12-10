@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ElevatorController : MonoBehaviour
 {
+    [SerializeField] AudioClip asMoving;
     public int actualFloor = 9;
     public bool isMoving = false;
     int nextFloor;
@@ -25,6 +26,7 @@ public class ElevatorController : MonoBehaviour
         nextFloor = actualFloor + 1;
         animToPlay = actualFloor+"to"+nextFloor;
         elevetorObj.Play(animToPlay, 0, 0.0f);
+        doorControll.elevatorAudio.PlayOneShot(asMoving);
         actualFloor = nextFloor;
         StartCoroutine(MovingBlock());
 
@@ -35,6 +37,7 @@ public class ElevatorController : MonoBehaviour
         nextFloor = actualFloor - 1;
         animToPlay = actualFloor+"to"+nextFloor;
         elevetorObj.Play(animToPlay, 0, 0.0f);
+        doorControll.elevatorAudio.PlayOneShot(asMoving);
         actualFloor = nextFloor;
         StartCoroutine(MovingBlock());
     }
@@ -48,6 +51,7 @@ public class ElevatorController : MonoBehaviour
             nextFloor = actualFloor + 1;
             animToPlay = actualFloor+"to"+nextFloor;
             elevetorObj.Play(animToPlay, 0, 0.0f);
+            doorControll.elevatorAudio.PlayOneShot(asMoving);
             actualFloor = nextFloor;
             yield return new WaitForSeconds(2.9f);
         }
@@ -63,6 +67,7 @@ public class ElevatorController : MonoBehaviour
             nextFloor = actualFloor - 1;
             animToPlay = actualFloor+"to"+nextFloor;
             elevetorObj.Play(animToPlay, 0, 0.0f);
+            doorControll.elevatorAudio.PlayOneShot(asMoving);
             actualFloor = nextFloor;
             yield return new WaitForSeconds(2.9f);
         }
